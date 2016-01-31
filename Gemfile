@@ -9,9 +9,7 @@ gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'
 
-gem 'bootstrap-sass', '3.2.0.0'
-gem 'sass-rails', '~> 5.0'
-gem 'pure-css-rails'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem 'jbuilder', '~> 2.0'
 
