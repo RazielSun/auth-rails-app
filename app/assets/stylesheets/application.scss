@@ -10,6 +10,47 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require pure
+ *= require grids-responsive
  *= require_self
+ *= require_tree .
  */
+
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * -- BASE STYLES --
+ */
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+/*
+ * -- CONTENT STYLES --
+ */
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
