@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+	get '/admin' => 'admin#index'
+	get '/admin/login' => 'admin#login'
 
-  resources :users, except: :index
+  	root 'users#index'
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  	resources :users, except: :index
+
+  	get '/login' => 'sessions#new'
+  	post '/login' => 'sessions#create'
+  	delete '/logout' => 'sessions#destroy'
 
 end
