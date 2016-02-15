@@ -12,7 +12,10 @@
 </head>
 <body class="<%= yield (:body_class) %>">
 
-<%= yield %>
+<div class="container">
+	<%= render 'layouts/navbar' %>
+	<%= yield %>
+</div> <!-- /container -->
 
 </body>
 </html>

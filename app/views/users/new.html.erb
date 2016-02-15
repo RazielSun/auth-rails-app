@@ -1,6 +1,16 @@
-<%= form_for(@user, url: users_path, method: :post) do |f| %>
-	<%= f.text_field :name, placeholder: "Name" %>
-	<%= f.email_field :email, placeholder: "Email" %>
-	<%= f.password_field :password, placeholder: "Password" %>
-	<%= f.submit "Create User" %>
+<% provide(:title, "Sign up") %>
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron">
+<%= form_for @user, url: users_path, method: :post, html: { class: "form-signin" } do |f| %>
+	<fieldset class="form-group">
+	<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+	</fieldset>
+	<fieldset class="form-group">
+	<%= f.email_field :email, placeholder: "Email", class: "form-control" %>
+	</fieldset>
+	<fieldset class="form-group">
+	<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+	</fieldset>
+	<%= f.submit "Create", class: "btn btn-primary" %>
 <% end %>
+</div>

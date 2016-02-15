@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
 	attr_accessor :token
 
-	VALID_EMAIL_REGEX = /\A[a-z0-9_\-@\.]*\z/i
+	VALID_EMAIL_REGEX = /\A[a-z0-9_\+\-@\.]*\z/i
 
 	before_save { self.email = email.downcase }
 	

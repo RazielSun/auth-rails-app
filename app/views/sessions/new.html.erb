@@ -1,5 +1,12 @@
-<%= form_for(:session, url: login_path, method: :post) do |f| %>
-	<%= f.email_field :email, placeholder: "Email" %>
-	<%= f.password_field :password, placeholder: "Password" %>
-	<%= f.submit "Log In" %>
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron">
+<%= form_for :session, url: login_path, method: :post, html: { class: "form-signin" } do |f| %>
+	<fieldset class="form-group">
+	<%= f.email_field :email, placeholder: "Email", class: "form-control" %>
+	</fieldset>
+	<fieldset class="form-group">
+	<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+	</fieldset>
+	<%= f.submit "Log In", class: "btn btn-primary" %>
 <% end %>
+</div>
